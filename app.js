@@ -917,3 +917,23 @@
 // function 
 
 
+function information(obj){
+    // const sentence = obj.street+ "," + obj.house+ ","  + obj.society;
+    if (!obj.street) {
+        return ("__"+ "," + obj.house+ ","  + obj.society)
+    } else if (!obj.house) {
+        return (obj.street +"," +"__"+","+obj.society)
+    } else if (!obj.society) {
+        return (obj.street + "," + obj.house + "," + "__");
+    } else {
+      return  obj.street+ "," + obj.house+ ","  + obj.society;
+    }
+}
+
+
+const data = {
+    // street: 10,
+    // house:"15A", 
+    society:"Earth Perfect",
+}
+console.log(information(data));

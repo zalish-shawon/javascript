@@ -56,7 +56,7 @@ console.log(sortMaker([2,4]));
 // console.log(sortMaker([4,2]));
 console.log(sortMaker([1,2]));
 console.log(sortMaker([1,1]));
-console.log(sortMaker([4,-2]));
+console.log(sortMaker([-4,-2]));
 
 
 
@@ -64,14 +64,12 @@ console.log(sortMaker([4,-2]));
 
 
 function findAddress(obj) {
-    let properties = Object.keys(obj);
-    for (let i =0; i < properties.length; i++) {
-        if(properties[i] !== "street") {
-            return "__";
-        } else 
+    for(let properties in obj) {
+       let result = obj[properties];
+        console.log(result);
     }
+    
 }
-
 
 let data = {
     street: 10,
@@ -81,14 +79,7 @@ let data = {
 
 console.log(findAddress(data));
 
-// if (data.hasOwnProperty("society")) {
-//     console.log(data.society);
-//   } else {
-//     console.log("__");
-//   }
 
-// for (let property in data) {
-//     console.log(data[property]);
-// }
 
-// 
+
+    
