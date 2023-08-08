@@ -10,3 +10,6 @@ function birthdayCakeCandles(candles) {
 }
 
 console.log(birthdayCakeCandles([4,4,1,3]));
+
+
+
