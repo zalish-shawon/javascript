@@ -19,8 +19,7 @@ function matchFinder(string1, string2) {
     else {
         let str = string1.includes(string2);
         return str;
-    }
-    
+    } 
 }
 
 console.log(matchFinder("john doe", "ohn"));
@@ -51,12 +50,10 @@ function sortMaker(arr) {
            }         
        }
        return [firstVal,secondVal];
-    }
-    
+    }  
 }
 
 console.log(sortMaker([2,4]));
-// console.log(sortMaker([4,2]));
 console.log(sortMaker([1,2]));
 console.log(sortMaker([1,1]));
 console.log(sortMaker([-4,-2]));
@@ -72,7 +69,6 @@ function findAddress(obj) {
     const society = obj.society || "__";
 
     return street + "," + house + "," + society;
-    
 }
 
 let data = {
@@ -86,4 +82,28 @@ console.log(findAddress(data));
 
 
 
+
+function canPay(changeArray, totalDue) {
+
+    if( changeArray.length === 0 || !Array.isArray(changeArray)) {
+        return "This is an empty array or not an array";
+    } else {
+        let sum = 0;
+        for (let i = 0; i < changeArray.length; i++) {
+            sum += changeArray[i];
+            
+        }
+        if (sum >= totalDue) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+}
+
+console.log(canPay([1,2,4], 10))
+console.log(canPay([1,5,5],10));
+console.log(canPay(25, 10))
+console.log(canPay([], 10))
     
