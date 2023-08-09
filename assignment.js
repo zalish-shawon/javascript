@@ -10,6 +10,8 @@ console.log(cubeNumber(3));
 
 
 
+
+
 function matchFinder(string1, string2) {
     if (typeof string1 && typeof string2 !== 'string') {
         return "please give me two string value";
@@ -31,9 +33,10 @@ console.log(matchFinder("Peter Parker", "pet"));
 
 
 
+
 function sortMaker(arr) {
-    let defaultVal = arr[0];
-    let reverseArr = arr[0];
+    let firstVal = arr[0];
+    let secondVal = arr[0];
 
     if (arr[0] === arr[1]) {
         return "equal";
@@ -41,13 +44,13 @@ function sortMaker(arr) {
         return "Invalid input";
     } else {
         for (let i =0; i < arr.length; i++) {
-            if (arr[i] > defaultVal) {
-               defaultVal = arr[i];
-           } else if (arr[i] < defaultVal) {
-               reverseArr = arr[i];
+            if (arr[i] > firstVal) {
+               firstVal = arr[i];
+           } else if (arr[i] < firstVal) {
+               secondVal = arr[i];
            }         
        }
-       return [defaultVal,reverseArr];
+       return [firstVal,secondVal];
     }
     
 }
@@ -64,10 +67,11 @@ console.log(sortMaker([-4,-2]));
 
 
 function findAddress(obj) {
-    for(let properties in obj) {
-       let result = obj[properties];
-        console.log(result);
-    }
+    const street = obj.street || "__";
+    const house = obj.house || "__";
+    const society = obj.society || "__";
+
+    return street + "," + house + "," + society;
     
 }
 
