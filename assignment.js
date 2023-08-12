@@ -28,7 +28,7 @@ console.log(matchFinder("Peter Parker", "Pen"));
 console.log(matchFinder("Peter Parker", "pet"));
 // console.log(matchFinder("Md Zalish", "ish"));
 // console.log(matchFinder("Md Zalish", 45));
-// console.log(matchFinder(455, 45));
+console.log(matchFinder("kjk", 45));
 
 
 
