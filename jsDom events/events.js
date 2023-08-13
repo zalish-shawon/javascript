@@ -37,3 +37,18 @@ const makeBtnGrey = document.getElementById('btn-grey');
 makeBtnGrey.addEventListener('click', function makeGrey() {
     document.body.style.backgroundColor = 'grey';
 })
+
+// Method 5 and final method we will use this
+
+document.getElementById('btn-goldenrod').addEventListener('click', function(){
+    document.body.style.backgroundColor = 'goldenrod';
+})
+
+// Text update with input field
+document.getElementById('btn-submit').addEventListener('click', function(){
+    const inputField = document.getElementById('input-field');
+    const inputMsg = document.getElementById('input-msg');
+    const inputText = inputField.value;
+    inputMsg.innerText = inputText;
+    inputField.value = ''; // reset input value
+   })
